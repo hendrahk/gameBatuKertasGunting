@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+        let p = prompt("silahkan pilih batu, kertas atau gunting");
+        if(p != "kertas" && p != "gunting" &&  p != "batu"){
+            alert("inputan anda bukan batu, kertas atau gunting");
+            window.location.reload();
+        }
+
+        let com = Math.random();
+        let pilihanCom = ""
+
+        if(com < 0.3){
+            pilihanCom = "batu";
+        }else if( com < 0.6) {
+            pilihanCom = "kertas";
+        }
+        else{
+            pilihanCom = "gunting";
+        }
+        console.log(`pilihan kamu ${p}`);
+        console.log(`pilihan komputer ${pilihanCom}`);
+
+        if(p == pilihanCom){
+            alert("hasilnya seri");
+        }else if(p == "batu"){
+            if(pilihanCom == "kertas"){
+                alert("anda kalah !");
+            }else if(pilihanCom == "gunting"){
+                alert("anda menang !");
+            }
+        }else if(p == "kertas"){
+            if(pilihanCom == "batu"){
+                alert("anda menang");
+            }else if(pilihanCom == "gunting"){
+                alert("anda kalah");
+            }
+        }else if(p == "gunting"){
+            if(pilihanCom == "batu"){
+                alert("anda kalah");
+            }else if(pilihanCom == "kertas"){
+                alert("anda menang");
+            }
+        }
+
+</script>
+</html>
